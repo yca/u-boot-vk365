@@ -195,6 +195,12 @@ static int davinci_eth_phy_detect(void)
 	for (i = 0; i < CONFIG_SYS_DAVINCI_EMAC_PHY_COUNT; i++)
 		active_phy_addr[i] = 0xff;
 
+#if defined(CONFIG_PHY_ADDR)
+	active_phy_addr[0] = CONFIG_PHY_ADDR;
+	num_phy = 1;
+	return num_phy;
+#endif
+
 	udelay(1000);
 	phy_act_state = readl(&adap_mdio->ALIVE);
 
@@ -209,7 +215,7 @@ static int davinci_eth_phy_detect(void)
 			if (count <= CONFIG_SYS_DAVINCI_EMAC_PHY_COUNT) {
 				active_phy_addr[j++] = i;
 			} else {
-				printf("%s: to many PHYs detected.\n",
+				printf("%s: too many PHYs detected.\n",
 					__func__);
 				count = 0;
 				break;
