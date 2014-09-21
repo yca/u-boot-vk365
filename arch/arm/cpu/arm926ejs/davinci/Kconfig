@@ -18,6 +18,9 @@ config TARGET_DA850EVM
 config TARGET_CAM_ENC_4XX
 	bool "CAM ENC 4xx board"
 
+config TARGET_ASELSAN_VK365
+	bool "Aselsan DM365 based camera board"
+
 config TARGET_HAWKBOARD
 	bool "Hawkboard"
 
@@ -61,6 +64,7 @@ config SYS_SOC
 
 source "board/enbw/enbw_cmc/Kconfig"
 source "board/ait/cam_enc_4xx/Kconfig"
+source "board/aselsan/vk365/Kconfig"
 source "board/Barix/ipam390/Kconfig"
 source "board/davinci/da8xxevm/Kconfig"
 source "board/davinci/dm355evm/Kconfig"

@@ -1,0 +1,6 @@
+VK365 BOARD
+M:	Yusuf Caglar Akyuz<caglar@bilkon-kontrol.com.tr>
+S:	Maintained
+F:	board/aselsan/vk365/
+F:	include/configs/vk365evm.h
+F:	configs/vk365_defconfig

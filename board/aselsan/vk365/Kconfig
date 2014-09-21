@@ -1,0 +1,12 @@
+if TARGET_ASELSAN_VK365
+
+config SYS_BOARD
+	default "vk365"
+
+config SYS_VENDOR
+	default "aselsan"
+
+config SYS_CONFIG_NAME
+	default "vk365"
+
+endif
